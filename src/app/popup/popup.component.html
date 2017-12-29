@@ -1,0 +1,18 @@
+<h3>Login</h3>
+<div>
+<label>Nickname</label>
+<br/>
+<md-input-container>
+<input mdInput type="text" #ncknm>
+</md-input-container>
+<br/>
+<label>Student ID</label>
+<br/>
+<md-input-container>
+<input mdInput type="password" #stID>
+</md-input-container>
+</div>
+<div md-dialog-actions>
+<button md-button class="popup-btn" (click)="dialogRef.close({ncknm:ncknm.value,stID:stID.value})">Submit</button>
+</div>
+<p id="err">{{errorMsg}}</p>
